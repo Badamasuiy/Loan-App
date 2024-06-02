@@ -67,7 +67,7 @@ document.getElementById('creditForm').addEventListener('submit', function(event)
         const loanStartDate = new Date(loanStartDateValue);
         const loanEndDate = new Date(loanEndDateValue);
     
-        const maxLoanAmount = annualIncome * 0.45;
+        const amountPayable = annualIncome * 0.45;
         let score = 0;
     
         // Check current amount in account
@@ -110,10 +110,10 @@ document.getElementById('creditForm').addEventListener('submit', function(event)
         }
     
         // Determine credit worthiness
-        if (loanAmount <= maxLoanAmount && score >= 30) {
-            resultElement.innerHTML = `Credit Worthiness: Good (Score: ${score})`;
+        if (loanAmount <= amountPayable && score >= 30) {
+            resultElement.innerHTML = `Credit Worthiness: Approved (Score: ${score})`;
         } else {
-            resultElement.innerHTML = `Credit Worthiness: Poor (Score: ${score})`;
+            resultElement.innerHTML = `Credit Worthiness: Rejected (Score: ${score})`;
         }
    // }
 
