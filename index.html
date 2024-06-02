@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    text-align: center;
+    margin-top: 290px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, select {
+    width: 80%;
+    padding: 8px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    align-content: center;
+}
+    </style>
+</head>
+<body>
+        <!-- <div class="bg-img2">
+        <form action="" id="regForm">
+            <h1>SIGN UP</h1>
+            <input type="text" placeholder="Enter Current Account Balance" id="Fname" class="custom">
+            <p id="balanceError" class="error-message">This field is required</p>
+            <input type="text" placeholder="Credit History" id="Lname" class="custom">
+            <p id="LnameError" class="error-message">This field is required</p>
+            <input type="date" placeholder="Last deposit date" id="test"/>
+            <input type="date" placeholder="Last deposit date" id="test"/>
+          
+                <select>
+                    <option>Account Type</option>
+                    <option>Saving</option>
+                    <option>Current</option>
+                </select>
+
+            <input type="password" placeholder="Re-enter Password" id="re-password" class="custom">
+            <p id="re-passwordError" class="error-message">This field is required</p>
+            <input type="password" placeholder="Re-enter Password" id="re-password" class="custom">
+            <p id="re-passwordError" class="error-message">This field is required</p>
+            <button type="submit">Register</button> <br/>
+            <h5> Already a Member? <a href="index.html">Login</a></h5>
+        </form>
+        <label>
+            Annual Revenue
+            <br />
+            <select>
+                <option value="">Select Revenue</option>
+                <option value="Rework"> Rework</option>
+            </select>
+        </label>
+    </div> -->
+
+    <div class="container">
+        <h1>Loan App</h1>
+        <form id="creditForm">
+            <label for="annualIncome">Annual Income:</label>
+            <input type="number" id="annualIncome" required><br>
+
+            <label for="loanAmount">Requested Loan Amount:</label>
+            <input type="number" id="loanAmount" required><br>
+
+            <label for="currentAmount">Account Balance:</label>
+            <input type="number" id="currentAmount" required><br>
+
+            <label>Credit History</label>
+            <select id="creditHistory" required>
+                <option>Select Credit History Period </option>
+                <option value="no">1 Month Ago</option>
+                <option value="no">2 Month Ago</option>
+                <option value="no">3 Month Ago</option>
+                <option value="no">4 Month Ago</option>
+                <option value="no">5 Month Ago</option>
+                <option value="yes">6 Month Ago</option>
+                <option value="yes">7 Month Ago</option>
+                <option value="yes">8 Month Ago</option>
+                <option value="yes">9 Month Ago</option>
+                <option value="yes">10 Month Ago</option>
+                <option value="yes">11 Month Ago</option>
+                <option value="yes">12 Month Ago</option>
+            </select><br>
+ 
+            <label for="lastDeposit">Last Deposit Date:</label>
+            <input type="date" id="lastDeposit" required><br>
+
+            <label for="lastLoanCollection">Last Loan Collection Date:</label>
+            <input type="date" id="lastLoanCollection" required><br>
+            <!-- <div class="grid"> -->
+            <label for="loanRepaymentStart">Loan Repayment Start Date:</label>
+            <input type="date" id="loanRepaymentStart" required><br>
+
+            <label for="loanRepaymentEnd">Loan Repayment End Date:</label>
+            <input type="date" id="loanRepaymentEnd" required><br>
+             <!-- </div> -->
+            <label>Account Type:</label>
+            <select id="accountType" required>
+                <option value="">Select Account</option>
+                <option value="current">Current</option>
+                <option value="savings">Savings</option>
+            </select><br>
+
+            <button type="submit">Check Credit Worthiness</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    
+
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
